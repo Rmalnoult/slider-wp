@@ -1,0 +1,25 @@
+<?php
+
+/*
+Plugin Name: Slider-wp
+Plugin URI: http://www.wsf.fr
+Description: Plugin réalisé en cours de Wordpress
+Author: Romano Malnoult & Julien Guyon
+Version: 0.5
+Author URI: http://www.romainmalnoult.com
+*/
+
+
+// Plugin Constants
+define ('SLIDER_WP_URL', plugin_dir_url(__FILE__) );
+define ('SLIDER_WP_DIR', plugin_dir_path(__FILE__) );
+
+// Classes
+require_once(SLIDER_WP_DIR . '/inc/cpt.php');
+require_once(SLIDER_WP_DIR . '/inc/fields.php');
+
+add_shortcode( 'pic', 'shortcode_slider_wp');
+
+function shortcode_slider_wp() {
+	return "<p>Coucou la wsf</p>";
+};

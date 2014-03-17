@@ -17,9 +17,6 @@ define ('SLIDER_WP_DIR', plugin_dir_path(__FILE__) );
 // Classes
 require_once(SLIDER_WP_DIR . '/inc/cpt.php');
 require_once(SLIDER_WP_DIR . '/inc/fields.php');
+require_once(SLIDER_WP_DIR . '/inc/shortcode.php');
 
-add_shortcode( 'pic', 'shortcode_slider_wp');
-
-function shortcode_slider_wp() {
-	return "<p>Coucou la wsf</p>";
-};
+new wsf_shortcode();
